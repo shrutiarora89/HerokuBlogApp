@@ -7,8 +7,8 @@
   // to the proxy end point provided by server.js.
   repos.requestRepos = function(callback) {
     $.get({
-      url: 'https://api.github.com/' +
-            '?per_page=100' +
+      url: '/github/user/repos/',+
+           '?per_page=100' +
             '&sort=updated',
       type: 'GET',
       headers: { 'Authorization': 'token ' + githubToken },
