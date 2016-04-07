@@ -3,15 +3,14 @@
 
   repos.all = [];
 
-  // TODO: Refactor and simplify this ajax call into a get request
+  // DONE: Refactor and simplify this ajax call into a get request
   // to the proxy end point provided by server.js.
   repos.requestRepos = function(callback) {
-    $.get({
+    $.ajax({
       url: '/github/user/repos/',+
            '?per_page=100' +
             '&sort=updated',
       type: 'GET',
-      headers: { 'Authorization': 'token ' + githubToken },
       success: function(data, message, xhr) {
         repos.all = data;
       }
