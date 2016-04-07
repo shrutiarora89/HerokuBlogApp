@@ -1,6 +1,6 @@
 (function(module) {
   var repos = {};
-
+ 
   repos.all = [];
 
   // DONE: Refactor and simplify this ajax call into a get request
